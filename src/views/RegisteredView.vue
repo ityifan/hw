@@ -1,52 +1,63 @@
 <template>
   <div class="home">
     <div class="AllFather">
-      <div class="title">To Do Event</div>
+      <div class="title">Registered Account</div>
       <div class="father">
         <div class="login">
           <div class="inputFather">
             <i class="el-icon-user"></i>
             <div class="bottom_border">
-              <input class="input" type="text" />
+              <input class="input" type="text" placeholder="Account number" />
+            </div>
+          </div>
+          <div class="inputFather">
+            <i class="el-icon-bank-card"></i>
+            <div class="bottom_border">
+              <input class="input" type="text" placeholder="Real name" />
+            </div>
+          </div>
+          <div class="inputFather">
+            <i class="el-icon-message"></i>
+            <div class="bottom_border">
+              <input class="input" type="text" placeholder="Email" />
             </div>
           </div>
           <div class="inputFather">
             <i class="el-icon-key"></i>
             <div class="bottom_border">
-              <input class="input" type="password" />
+              <input class="input" type="text" placeholder="Password" />
             </div>
           </div>
         </div>
         <div class="bottom">
-          <div class="a">
-            <div>Forget Password</div>
-            <div @click="toRegistered('/registered')">Registered Account</div>
-          </div>
-          <div @click="toRegistered('/mian')" class="button">Login</div>
+          <div class="button">Submit</div>
+        </div>
+         <div class="bottom">
+          <div class="button" @click="toBack">Back</div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import router from "../router/index";
+// @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+import router from '../router/index'
 export default {
   name: "HomeView",
   data() {
     return {
-      message: "aaa",
+    
     };
   },
-  created() {
-    console.log(1);
-  },
   methods: {
-    toRegistered: function (a) {
-      router.push(a)
+    toBack: function () {
+      router.push('/')
     },
-  },
-  mounted() {},
+  }
+  // components: {
+  //   HelloWorld
+  // }
 };
 </script>
 <style scoped>
@@ -64,6 +75,16 @@ export default {
     opacity: 0;
     bottom: 800px;
   }
+  /* 25%{
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+    height: 50px;
+  }
+  75%{
+    opacity: 0.75;
+  } */
   100% {
     opacity: 1;
   }
@@ -74,7 +95,7 @@ i {
 .inputFather {
   display: flex;
   width: 200px;
-  margin: 30px;
+  margin: 15px;
 }
 .input {
   border: none;
@@ -110,7 +131,7 @@ i {
   border-radius: 10px;
 }
 .bottom {
-  margin: 10px;
+  margin-top: 10px;
   font-weight: bold;
   width: 100%;
   flex-direction: column;
