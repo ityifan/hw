@@ -12,7 +12,7 @@
       <div>共1项</div>
     </div>
 
-    <div class="detail" v-html="'232131312\n123123213\n1232132\n'">备注：</div>
+    <div class="detail">备注：12123124142143242144141</div>
     <div class="Threeline">
       <div>报告异常</div>
       <div>部分已出</div>
