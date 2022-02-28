@@ -1,24 +1,12 @@
 <template>
   <div class="home">
-    <!-- <div class="Userinfo">
-      <div class="uses">
-        <div style="font-weight: bold">
-          <i class="el-icon-user"></i> ：沈老师
-        </div>
-      </div>
-      <div class="uses"></div>
-      <div class="all">
-        <div><i class="el-icon-phone-outline"></i> ：17634711364</div>
-        <div><i class="el-icon-time"></i>：1天</div>
-      </div>
-    </div> -->
     <div class="Top">
       <div>
         <i class="el-icon-back" @click="toRegistered"></i>
       </div>
       <div>任务</div>
       <div>
-          <i @click="toDetail" class="el-icon-circle-plus-outline"></i>
+        <i @click="toDetail" class="el-icon-circle-plus-outline"></i>
       </div>
     </div>
     <div class="main">
@@ -50,11 +38,11 @@ export default {
   },
   methods: {
     toRegistered: function () {
-      router.back(-1)
+      router.back(-1);
     },
-     toDetail:function(){
-       router.push('/new')
-     }
+    toDetail: function () {
+      router.push("/new");
+    },
   },
   mounted() {},
 };
@@ -72,10 +60,10 @@ export default {
   justify-content: space-between;
   margin-bottom: 10px;
 }
- i {
-    font-size: 26px;
-    margin-left: 10px;
-    margin-right: 10px;
+i {
+  font-size: 26px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .Foreline {
   margin: 5px;
