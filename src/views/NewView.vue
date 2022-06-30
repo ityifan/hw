@@ -34,7 +34,7 @@
       <div class="one">
         <div class="title1">成功积分:</div>
         <div>
-          <div >
+          <div>
             <select
               class="input select"
               v-model="ProductActive"
@@ -51,10 +51,10 @@
           </div>
         </div>
       </div>
-          <div class="one">
+      <div class="one">
         <div class="title1">截止日期:</div>
         <div>
-          <div >
+          <div>
             <select class="input select">
               <option value="volvo">Volvo</option>
               <option value="saab">Saab</option>
@@ -78,7 +78,6 @@
           </div>
         </div>
       </div>
-  
     </div>
     <div class="button" @click="submit">发布</div>
   </div>
@@ -86,7 +85,7 @@
 
 <script>
 import router from "../router/index";
-// import HelloWorld from '@/components/HelloWorld.vue'
+import { get, post } from "../request/index"; // eslint-disable-line no-unused-vars
 export default {
   name: "MainView",
   components: {},
@@ -107,18 +106,19 @@ export default {
     // console.log(1);
   },
   methods: {
-    submit(){
-    console.log(this.textarea);
+    submit() {
+      console.log(this.textarea);
     },
     changeProduct(event) {
       this.ProductActive = event.target.value; //获取option对应的value值
       console.log("你选中了", this.ProductActive);
+      post("/created", { beizhu: this.textarea });
     },
     toRegistered: function () {
       router.back(-1);
     },
     toDetail: function () {
-      router.push("/detail");
+      // router.push("/detail");
     },
   },
   mounted() {},
@@ -177,6 +177,7 @@ export default {
   font-weight: bolder;
 }
 @-webkit-keyframes myfirst {
+  /* eslint-disable-line no-unused-vars */
   0% {
     opacity: 0;
     bottom: 800px;

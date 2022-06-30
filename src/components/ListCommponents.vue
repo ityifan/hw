@@ -1,42 +1,44 @@
 <template>
-   <div  class="list">
-        <div class="Oneline">
-          <div>家庭作业</div>
-          <div class="fa">
-            <div class="xiao">体</div>
-            <div>已完成</div>
-          </div>
-        </div>
-        <div class="detail">
-
-        </div>
-        <div class="Twoline">
-          <div>何一帆的任务</div>
-          <div>共1项</div>
-        </div>
-        <div class="Threeline">
-          <div>报告异常</div>
-          <div>部分已出</div>
-        </div>
-        <div class="hr"></div>
-        <div class="Foreline">
-          <div>发布时间：2021-4-2</div>
-          <div>接受时间:2021-4-2</div>
-        </div>
-        <div class="Foreline">
-          <div>任务号：2984792849283493</div>
-        </div>
+  <div class="list" @click="toDetailsList">
+    <div class="Oneline">
+      <div>家庭作业</div>
+      <div class="fa">
+        <div class="xiao">体</div>
+        <div>已完成</div>
       </div>
+    </div>
+    <div class="detail"></div>
+    <div class="Twoline">
+      <div>爸爸的任务</div>
+      <div>共1项</div>
+    </div>
+    <div class="Threeline">
+      <div>报告异常</div>
+      <div>部分已出</div>
+    </div>
+    <div class="hr"></div>
+    <div class="Foreline">
+      <div>发布时间：2021-4-2</div>
+      <div>接受时间:2021-4-2</div>
+    </div>
+    <div class="Foreline">
+      <div>任务号：2984792849283493</div>
+    </div>
+  </div>
 </template>
 
 <script>
+import router from "../router/index";
 export default {
-
-}
+  methods: {
+    toDetailsList: function () {
+      router.push("/detail");
+    },
+  },
+};
 </script>
 
 <style  scoped>
-.detail
 .Foreline {
   margin: 5px;
   width: 95%;

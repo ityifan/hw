@@ -9,15 +9,15 @@
         <i @click="toDetail" class="el-icon-user"></i>
       </div>
     </div>
-    <div style="width: 95%" class="fatherss">
+    <div style="width: 95%">
       <DetailsList />
     </div>
   </div>
 </template>
 
 <script>
-import router from "../router/index";
 import DetailsList from "@/components/DetailsList.vue";
+import router from "../router/index";
 export default {
   name: "MainView",
   components: {
@@ -28,9 +28,7 @@ export default {
       message: "aaa",
     };
   },
-  created() {
-    // console.log(1);
-  },
+  created() {},
   methods: {
     toRegistered: function () {
       router.back(-1);

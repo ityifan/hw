@@ -10,8 +10,14 @@
       </div>
     </div>
     <div class="main">
-      <div>我的任务</div>
-      <div>我的发布</div>
+      <div
+        :class="{ active: item.id === index }"
+        v-for="item in list"
+        :key="item.id"
+        @click="handle(item.id)"
+      >
+        {{ item.name }}
+      </div>
     </div>
     <div style="width: 95%" class="fatherss">
       <ListCommponents />
@@ -31,12 +37,21 @@ export default {
   data() {
     return {
       message: "aaa",
+      index: 1,
+      list: [
+        { id: 1, name: "我的任务" },
+        { id: 2, name: "我的发布" },
+      ],
     };
   },
   created() {
     // console.log(1);
   },
   methods: {
+    handle: function (id) {
+      this.index = id;
+      console.log(this.index);
+    },
     toRegistered: function () {
       router.back(-1);
     },
@@ -168,12 +183,15 @@ i {
   margin-bottom: 10px;
   background-color: white;
 }
+.active {
+  background-color: rgb(141, 243, 94);
+}
 .main > div {
   font-weight: bold;
   color: white;
   width: 100px;
   height: 30px;
-  background-color: rgb(141, 243, 94);
+  border: 1px solid #cccc;
   border-radius: 40px;
   line-height: 30px;
   margin-right: 10px;

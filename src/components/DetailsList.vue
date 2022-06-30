@@ -8,11 +8,18 @@
       </div>
     </div>
     <div class="Twoline">
-      <div>何一帆的任务</div>
+      <div>爸爸的任务</div>
       <div>共1项</div>
     </div>
-
-    <div class="detail">备注：12123124142143242144141</div>
+    <div class="detail">
+      备注：
+      <p
+        class="p"
+        v-html="`爸爸真的来了吗\n啊啊实打实大师的\n啊啊实打实大师的`"
+        style="white-space: pre-line"
+      ></p>
+      <p></p>
+    </div>
     <div class="Threeline">
       <div>报告异常</div>
       <div>部分已出</div>
@@ -28,7 +35,10 @@
     </div>
     <div class="Foreline">
       <div>任务号：2984792849283493</div>
+      <div>发布人:Leon</div>
     </div>
+    <div v-if="true" class="button">接受</div>
+    <div v-if="true" class="button">拒绝</div>
   </div>
 </template>
 
@@ -37,6 +47,25 @@ export default {};
 </script>
 
 <style  scoped>
+.button {
+  font-weight: bold;
+  animation: myfirst 2s;
+  -webkit-animation: myfirst 2s;
+  animation-fill-mode: forwards;
+  text-align: center;
+  line-height: 30px;
+  width: 95%;
+  height: 30px;
+  color: white;
+  background-color: darkturquoise;
+  opacity: 0.8;
+  margin: 10px;
+  border-radius: 10px;
+}
+.p {
+  width: 200px;
+  text-align: left;
+}
 .detail {
   margin-top: 10px;
   margin-left: 10px;
@@ -145,7 +174,6 @@ export default {};
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: 300px;
   border-radius: 10px;
   margin-bottom: 10px;
   background-color: white;
