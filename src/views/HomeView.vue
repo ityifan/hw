@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="AllFather">
-      <div class="title">To Do Event(Push-Hooks-gitee)</div>
+      <div class="title">To Do Event(GitHub-Push-Hooks-gitee)</div>
       <div class="father">
         <div class="login">
           <div class="inputFather">
