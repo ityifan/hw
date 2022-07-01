@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="AllFather">
-      <div class="title">To Do Event</div>
+      <div class="title">To Do Event(LeonTest)</div>
       <div class="father">
         <div class="login">
           <div class="inputFather">
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     toRegistered: function (a) {
-      router.push(a)
+      router.push(a);
     },
   },
   mounted() {},
